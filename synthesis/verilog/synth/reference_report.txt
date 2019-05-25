@@ -1,0 +1,36 @@
+ 
+****************************************
+Report : reference
+Design : proc
+Version: P-2019.03
+Date   : Thu May  2 11:08:22 2019
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+GTECH_NOT          gtech          0.000000       5      0.000000  u
+GTECH_OR2          gtech          0.000000      10      0.000000  u
+controlhazard                     0.000000       1      0.000000  h, u
+pipe1                             0.000000       1      0.000000  h, n, u
+pipe2                             0.000000       1      0.000000  h, n, u
+pipe3                             0.000000       1      0.000000  h, n, u
+pipe4                             0.000000       1      0.000000  h, n, u
+stage1                            0.000000       1      0.000000  h, n, u
+stage2                            0.000000       1      0.000000  h, n, u
+stage3                            0.000000       1      0.000000  h, u
+stage4                            0.000000       1      0.000000  h, n, u
+stage5                            0.000000       1      0.000000  h
+-----------------------------------------------------------------------------
+Total 12 references                                     0.000000
+1

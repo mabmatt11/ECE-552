@@ -1,0 +1,51 @@
+ 
+****************************************
+Report : reference
+Design : proc
+Version: P-2019.03
+Date   : Sat May  4 23:20:24 2019
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+AND2X1             gscl45nm       2.346500       6     14.079000  
+AND2X2             gscl45nm       2.815800      66    185.842797  
+AOI21X1            gscl45nm       2.815800      32     90.105598  
+AOI22X1            gscl45nm       3.285100      25     82.127500  
+BUFX2              gscl45nm       2.346500      14     32.850999  
+BUFX4              gscl45nm       2.815800       2      5.631600  
+DFFPOSX1           gscl45nm       7.978100     293   2337.583248  n
+INVX1              gscl45nm       1.407900     487    685.647288  
+INVX2              gscl45nm       1.877200      29     54.438800  
+INVX4              gscl45nm       3.285100      13     42.706300  
+INVX8              gscl45nm       3.285100      30     98.552999  
+MUX2X1             gscl45nm       3.754400       4     15.017600  
+NAND2X1            gscl45nm       1.877200     273    512.475602  
+NAND3X1            gscl45nm       2.346500      64    150.175995  
+NOR2X1             gscl45nm       2.346500      67    157.215495  
+NOR3X1             gscl45nm       2.815800      25     70.394999  
+OAI21X1            gscl45nm       2.815800     315    886.976985  
+OR2X1              gscl45nm       2.346500       3      7.039500  
+OR2X2              gscl45nm       2.815800      12     33.789599  
+XOR2X1             gscl45nm       4.693000      86    403.597986  
+stage1                        104871.184270
+                                                 1  104871.184270 d, h, n
+stage2                         3931.326046       1   3931.326046  d, h, n
+stage3                         3552.600945       1   3552.600945  d, h
+stage4                        105505.208541
+                                                 1  105505.208541 d, h, n
+stage5                          122.017998       1    122.017998  d, h
+-----------------------------------------------------------------------------
+Total 25 references                                 223848.587689
+1

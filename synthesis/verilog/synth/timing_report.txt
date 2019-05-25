@@ -1,0 +1,678 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 20
+Design : proc
+Version: P-2019.03
+Date   : Thu May  2 11:08:24 2019
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: nom_pvt   Library: gtech
+Wire Load Model Mode: top
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: err (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 f
+  rst (in)                                                0.00 #     0.10 f
+  s4/rst (stage4)                                         0.00 #     0.10 f
+  s4/DM/rst (mem_system_memtype1)                         0.00 #     0.10 f
+  s4/DM/fourBankMem/rst (four_bank_mem_0)                 0.00 #     0.10 f
+  s4/DM/fourBankMem/m3/rst (final_memory_0)               0.00 #     0.10 f
+  s4/DM/fourBankMem/m3/I_44/Z (GTECH_NOT)                 0.00 #     0.10 r
+  s4/DM/fourBankMem/m3/C1049/Z (GTECH_AND2)               0.00       0.10 r
+  s4/DM/fourBankMem/m3/C1046/Z (GTECH_OR2)                0.00       0.10 r
+  s4/DM/fourBankMem/m3/err (final_memory_0)               0.00       0.10 r
+  s4/DM/fourBankMem/C121/Z (GTECH_OR2)                    0.00       0.10 r
+  s4/DM/fourBankMem/C120/Z (GTECH_OR2)                    0.00       0.10 r
+  s4/DM/fourBankMem/C118/Z (GTECH_AND2)                   0.00       0.10 r
+  s4/DM/fourBankMem/err (four_bank_mem_0)                 0.00       0.10 r
+  s4/DM/C62/Z (GTECH_OR2)                                 0.00       0.10 r
+  s4/DM/C61/Z (GTECH_OR2)                                 0.00       0.10 r
+  s4/DM/C60/Z (GTECH_OR2)                                 0.00       0.10 r
+  s4/DM/err (mem_system_memtype1)                         0.00       0.10 r
+  s4/err (stage4)                                         0.00       0.10 r
+  C19/Z (GTECH_OR2)                                       0.00       0.10 r
+  C18/Z (GTECH_OR2)                                       0.00       0.10 r
+  err (out)                                               0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  output external delay                                  -0.10       0.90
+  data required time                                                 0.90
+  --------------------------------------------------------------------------
+  data required time                                                 0.90
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.80
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff0/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff0/rst (dff_937)                               0.00 #     0.10 r
+  p1/EPC/dff0/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff0/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff0/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff0/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff1/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff1/rst (dff_936)                               0.00 #     0.10 r
+  p1/EPC/dff1/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff1/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff1/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff1/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff2/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff2/rst (dff_935)                               0.00 #     0.10 r
+  p1/EPC/dff2/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff2/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff2/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff2/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff3/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff3/rst (dff_934)                               0.00 #     0.10 r
+  p1/EPC/dff3/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff3/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff3/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff3/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff4/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff4/rst (dff_933)                               0.00 #     0.10 r
+  p1/EPC/dff4/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff4/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff4/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff4/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff5/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff5/rst (dff_932)                               0.00 #     0.10 r
+  p1/EPC/dff5/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff5/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff5/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff5/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff6/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff6/rst (dff_931)                               0.00 #     0.10 r
+  p1/EPC/dff6/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff6/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff6/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff6/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff7/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff7/rst (dff_930)                               0.00 #     0.10 r
+  p1/EPC/dff7/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff7/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff7/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff7/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff8/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff8/rst (dff_929)                               0.00 #     0.10 r
+  p1/EPC/dff8/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff8/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff8/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff8/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff9/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff9/rst (dff_928)                               0.00 #     0.10 r
+  p1/EPC/dff9/B_0/Z (GTECH_BUF)                           0.00 #     0.10 r
+  p1/EPC/dff9/C11/Z_0 (*SELECT_OP_2.1_2.1_1)              0.00       0.10 r
+  p1/EPC/dff9/state_reg/next_state (**SEQGEN**)           0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff9/state_reg/clocked_on (**SEQGEN**)           0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff10/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff10/rst (dff_927)                              0.00 #     0.10 r
+  p1/EPC/dff10/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff10/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff10/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff10/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff11/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff11/rst (dff_926)                              0.00 #     0.10 r
+  p1/EPC/dff11/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff11/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff11/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff11/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff12/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff12/rst (dff_925)                              0.00 #     0.10 r
+  p1/EPC/dff12/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff12/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff12/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff12/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff13/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff13/rst (dff_924)                              0.00 #     0.10 r
+  p1/EPC/dff13/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff13/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff13/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff13/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff14/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff14/rst (dff_923)                              0.00 #     0.10 r
+  p1/EPC/dff14/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff14/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff14/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff14/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/EPC/dff15/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/EPC/rst (r16_b_23)                                   0.00 #     0.10 r
+  p1/EPC/dff15/rst (dff_922)                              0.00 #     0.10 r
+  p1/EPC/dff15/B_0/Z (GTECH_BUF)                          0.00 #     0.10 r
+  p1/EPC/dff15/C11/Z_0 (*SELECT_OP_2.1_2.1_1)             0.00       0.10 r
+  p1/EPC/dff15/state_reg/next_state (**SEQGEN**)          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/EPC/dff15/state_reg/clocked_on (**SEQGEN**)          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/instruction_s1_reg/dff0/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/instruction_s1_reg/rst (r16_b_21)                    0.00 #     0.10 r
+  p1/instruction_s1_reg/dff0/rst (dff_904)                0.00 #     0.10 r
+  p1/instruction_s1_reg/dff0/B_0/Z (GTECH_BUF)            0.00 #     0.10 r
+  p1/instruction_s1_reg/dff0/C11/Z_0 (*SELECT_OP_2.1_2.1_1)
+                                                          0.00       0.10 r
+  p1/instruction_s1_reg/dff0/state_reg/next_state (**SEQGEN**)
+                                                          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/instruction_s1_reg/dff0/state_reg/clocked_on (**SEQGEN**)
+                                                          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/instruction_s1_reg/dff1/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/instruction_s1_reg/rst (r16_b_21)                    0.00 #     0.10 r
+  p1/instruction_s1_reg/dff1/rst (dff_903)                0.00 #     0.10 r
+  p1/instruction_s1_reg/dff1/B_0/Z (GTECH_BUF)            0.00 #     0.10 r
+  p1/instruction_s1_reg/dff1/C11/Z_0 (*SELECT_OP_2.1_2.1_1)
+                                                          0.00       0.10 r
+  p1/instruction_s1_reg/dff1/state_reg/next_state (**SEQGEN**)
+                                                          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/instruction_s1_reg/dff1/state_reg/clocked_on (**SEQGEN**)
+                                                          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+  Startpoint: rst (input port clocked by clk)
+  Endpoint: p1/instruction_s1_reg/dff2/state_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.10       0.10 r
+  rst (in)                                                0.00 #     0.10 r
+  p1/rst (pipe1)                                          0.00 #     0.10 r
+  p1/instruction_s1_reg/rst (r16_b_21)                    0.00 #     0.10 r
+  p1/instruction_s1_reg/dff2/rst (dff_902)                0.00 #     0.10 r
+  p1/instruction_s1_reg/dff2/B_0/Z (GTECH_BUF)            0.00 #     0.10 r
+  p1/instruction_s1_reg/dff2/C11/Z_0 (*SELECT_OP_2.1_2.1_1)
+                                                          0.00       0.10 r
+  p1/instruction_s1_reg/dff2/state_reg/next_state (**SEQGEN**)
+                                                          0.00       0.10 r
+  data arrival time                                                  0.10
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  p1/instruction_s1_reg/dff2/state_reg/clocked_on (**SEQGEN**)
+                                                          0.00       1.00 r
+  library setup time                                      0.00       1.00
+  data required time                                                 1.00
+  --------------------------------------------------------------------------
+  data required time                                                 1.00
+  data arrival time                                                 -0.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.90
+
+
+1
